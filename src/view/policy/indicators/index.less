@@ -1,0 +1,100 @@
+.policy-indicators {
+
+}
+
+.policy-indicators-modal {
+  .add-form-btn {
+    border: 1px dashed rgba(0, 0, 0, 0.25);
+    width: 100%;
+  }
+
+  .indicators-template {
+    border: 1px dashed rgba(0, 0, 0, 0.25);
+    border-left: none;
+    border-right: none;
+  }
+
+  .form-item-Inline {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .ant-form-item {
+      //flex: 1;
+      width: 50%;
+    }
+  }
+}
+
+.vertical-end-modal {
+  .ant-modal {
+    display: inline-block;
+    vertical-align: bottom;
+    top: auto;
+    text-align: left;
+    padding-bottom: 0px;
+    width: 100% !important;
+    bottom: 0;
+    position: absolute;
+    height: 80%;
+  }
+
+  .ant-modal-content {
+    height: 100%;
+  }
+
+  .ant-modal-body {
+    height: 100%;
+
+    .policy-indicators-test-content {
+      display: flex;
+      height: 100%;
+
+      .left-form {
+        width: 500px;
+        height: 100%;
+        overflow: auto;
+        border-right: 1px dashed rgba(0, 0, 0, 0.15);
+        margin-right: 20px;
+        padding-bottom: 20px;
+      }
+
+      .right-form {
+        width: calc(100% - 500px);
+
+        .table-content {
+          height: calc(100% - 89px);
+          overflow: auto;
+        }
+      }
+
+      h4 {
+        span {
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.45);
+        }
+
+        .factor-data {
+          color: #D0021B;
+        }
+      }
+    }
+  }
+}
+
+.ant-form-item .ant-form-item-control .time-input {
+  .ant-input {
+    padding-right: 11px;
+  }
+
+  .ant-input-suffix {
+    z-index: 1;
+    right: -90px;
+  }
+}
+
+.ant-checkbox-disabled.ant-checkbox-indeterminate .ant-checkbox-inner:after {
+  background-color: #c3c3c3;
+}
+

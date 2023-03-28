@@ -1,0 +1,75 @@
+.ant-layout-right {
+  height: 100%;
+
+  .cci-data-menu-container {
+    height: calc(100% - 50px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .circle-o {
+      opacity: 0;
+      position: absolute;
+      right: 18px;
+      margin-top: -18px;
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, .65);
+
+      &:after {
+        content: " ";
+        position: absolute;
+        left: 50%;
+        margin-top: 1px;
+        margin-left: -4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #ffffff;
+        z-index: 2;
+      }
+    }
+
+    .ant-tree {
+      li:hover {
+        cursor: pointer;
+      }
+
+      li .ant-tree-node-content-wrapper, li .ant-tree-node-selected {
+        width: calc(100% - 24px);
+
+        &:hover {
+          color: @primary-color;
+          background: transparent;
+
+          i.circle-o {
+            opacity: 1;
+          }
+        }
+
+        .title-span {
+          width: 100%;
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
+
+      li.ant-tree-treenode-selected:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 24px;
+        background: #dae8eb;
+        transition: all .3s;
+        border-right: 3px solid @primary-color;
+      }
+
+      li.ant-tree-treenode-selected .ant-tree-node-selected {
+        position: relative;
+        background-color: initial;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+//今日数据样式
+@import "../../../public/css/variable";
+@import "../../report/index";
+
+.report-today {
+  background-color: #fff;
+  height: 100%;
+  .report-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid @border-color-default;
+    .report-data {
+      //color: @font-color-user;
+    }
+    .ant-form-item-label {
+      label {
+        color: @font-color-default;
+      }
+    }
+    .event-count {
+      font-size: 16px;
+      width: 150px;
+      .event-count-data {
+        font-size: 20px;
+        font-weight: bold;
+        color: #1d94a1
+      }
+    }
+    .percent-area {
+      width: calc(100% - 150px);
+      .ant-form-item {
+        margin: 0;
+      }
+    }
+    .area {
+      display: inline-block;
+      vertical-align: middle;
+      padding-bottom: 15px;
+    }
+    .progress-container {
+      line-height: 50px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+stages:
+  - install
+  - compile
+  - deploy
+
+job 1:
+  only:
+      - dev@root/aldebaran
+  stage: install
+  script:
+    - npm install
+  cache:
+    paths:
+      - node_modules/
+
+job 2:
+  only:
+      - dev@root/aldebaran
+  stage: compile
+  script:
+    - npm run dll
+    - npm run build
+  cache:
+    paths:
+      - node_modules/
+      - dll/
+      - dist/
+
+job 3:
+  only:
+    - dev@root/aldebaran
+  stage: deploy
+  script:
+    - sudo rm -rf /home/bunddata/tools/apache-tomcat-8.5.32/webapps/ROOT/*
+    - sudo cp -rf dist/* /home/bunddata/tools/apache-tomcat-8.5.32/webapps/ROOT/
+  cache:
+    paths:
+      - dist/

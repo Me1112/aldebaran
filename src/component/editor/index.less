@@ -1,0 +1,168 @@
+.editor-operation-buttons {
+  float: right;
+  cursor: pointer;
+  margin: 20px;
+  word-break: keep-all;
+  white-space: nowrap;
+  z-index: 99;
+  position: relative;
+  right: 320px;
+}
+
+.flow-editor-panel {
+  position: absolute !important;
+  height: calc(100% - 124px);
+  width: calc(100% - 80px);
+  overflow: hidden;
+
+  .editor-unit-buttons {
+    z-index: 99;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .unit-button {
+    text-align: left;
+    line-height: 32px;
+    font-weight: 400;
+    touch-action: manipulation;
+    cursor: pointer;
+    background: #fff none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 0 10px;
+    font-size: 14px;
+    border-radius: 2px;
+    height: 32px;
+    user-select: none;
+    position: relative;
+    display: inline-block;
+
+    i {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      margin-top: -2px;
+      display: inline-block;
+      vertical-align: middle;
+      border-style: none;
+
+      &.node-begin {
+        background: url('../../public/img/0.png');
+        cursor: pointer;
+      }
+
+      &.node-resource, &.node-rule_set, &.node-decision_tree, &.node-score_card {
+        background: url('../../public/img/2.png');
+        cursor: pointer;
+      }
+
+      &.node-decision_node {
+        background: url('../../public/img/3.png');
+        cursor: pointer;
+      }
+
+      &.node-end {
+        background: url('../../public/img/1.png');
+        cursor: pointer;
+      }
+
+      &.close-node {
+        display: none;
+      }
+    }
+
+    &:hover {
+      & i.close-node {
+        display: inline-block;
+        float: right;
+        margin-top: 0px;
+        margin-right: 0px;
+        position: absolute;
+        cursor: pointer;
+        right: 0;
+        width: 12px;
+        height: 12px;
+        font-size: 12px;
+      }
+    }
+
+    &.border-begin {
+      border: 1px solid #e5b484;
+    }
+
+    &.border-resource, &.border-rule_set, &.border-decision_tree, &.border-score_card {
+      border: 1px solid #a1beed;
+    }
+
+    &.border-decision_node {
+      border: 1px solid #82bf99;
+    }
+
+    &.border-end {
+      border: 1px solid #e58484;
+    }
+  }
+
+  .editor-area {
+    overflow: auto;
+    position: absolute;
+    width: calc(100% - 320px);
+    height: calc(100% - 32px);
+    max-height: calc(100% - 32px);
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+
+    &.view {
+      height: calc(100% - 84px);
+    }
+
+    .edge-label {
+      color: #979797;
+      cursor: pointer;
+    }
+
+    .flow-node {
+      position: absolute;
+    }
+
+    .clone-node-move {
+      cursor: move;
+    }
+
+    .jtk-endpoint-connected, .jtk-drag-hover, .jtk-endpoint:hover {
+      svg * {
+        fill: #979797;
+      }
+    }
+
+    .edge-label {
+      color: #979797;
+      cursor: pointer;
+    }
+
+    .del-icon {
+      color: #979797;
+      cursor: pointer;
+      opacity: 0;
+    }
+
+    .jtk-overlay.del-icon.jtk-hover {
+      opacity: 1;
+    }
+  }
+
+  .config-area {
+    width: 320px;
+    height: calc(100% - 32px);
+    padding: 20px 0 20px 20px;
+    position: absolute;
+    right: 0;
+    overflow: auto;
+  }
+}
+
+.popover-left-auto {
+  left: auto !important;
+  top: auto !important;;
+}

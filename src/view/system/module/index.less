@@ -1,0 +1,52 @@
+@import "../../../public/css/variable";
+
+.module-content-container {
+  max-height: 200px;
+  overflow: scroll;
+  table {
+    width: 100%;
+    tr {
+      th {
+        height: 40px;
+        color: @font-color-default;
+        font-weight: normal;
+        text-align: center;
+        background-color: @bg-color-content;
+        &.ico-wrap {
+          border: none;
+          background-color: @font-color-white;
+          i {
+            cursor: pointer;
+            color: @bg-color-iconfont-active;
+          }
+        }
+      }
+      td {
+        padding: 5px;
+        input {
+          border: 1px solid @border-color-default;
+          width: 100%;
+        }
+        &:last-of-type {
+          text-align: center;
+        }
+        &.ico-wrap {
+          border: none;
+          i {
+            cursor: pointer;
+            color: @bg-color-iconfont-active;
+          }
+        }
+        .ant-input.has-error {
+          border-color: @font-color-fail;
+        }
+      }
+      th, td {
+        border: 1px solid @border-color-default;
+      }
+    }
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
+  }
+}

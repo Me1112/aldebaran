@@ -1,0 +1,82 @@
+@import "~@public/css/variable";
+
+.factor-template-condition-enums {
+  margin-left: 12.5%;
+  margin-bottom: 10px;
+
+  .enum-title {
+    span {
+      margin: 0 40px;
+    }
+  }
+
+  .enum-container {
+    .enum-row {
+      .bracket {
+        margin-left: 3px;
+        margin-right: -7px;
+      }
+
+      .ant-input {
+        width: 40px;
+        margin-left: 10px;
+      }
+
+      .ant-select {
+        width: 140px;
+        margin: 10px 0 10px 10px;
+
+        .ant-select-selection-selected-value {
+          padding-right: 0;
+        }
+
+        &.w50 {
+          width: 50px;
+
+          .ant-select-selection-selected-value {
+            text-overflow: initial;
+          }
+        }
+        &.w110 {
+          width: 110px;
+        }
+        &.w160 {
+          width: 160px;
+        }
+
+        &.w170 {
+          width: 170px;
+        }
+      }
+
+      i.anticon-plus-circle, i.anticon-minus-circle {
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .ant-input, .ant-select {
+        &.has-error {
+          border-color: @font-color-fail;
+        }
+      }
+
+      .ant-radio-group {
+        margin-left: 10px;
+
+        &.has-error {
+          outline: 1px solid @font-color-fail;
+          height: 30px;
+          line-height: 30px;
+        }
+      }
+
+      .ant-radio-wrapper {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .highlight-keyword {
+    color: @primary-color;
+  }
+}

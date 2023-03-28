@@ -1,0 +1,155 @@
+@import "../../../../public/css/variable";
+
+.tabs-no-border.ant-tabs-top {
+  .ant-tabs-bar {
+    border-bottom: 1px solid #e8e8e8 !important;
+
+    .ant-tabs-tab {
+      border: none;
+    }
+
+    .ant-tabs-tab-active {
+      background-color: #fff !important;
+      color: @bg-color-iconfont-active !important;
+      padding-bottom: inherit;
+      border-bottom: 2px solid;
+    }
+  }
+}
+
+.editor-panel {
+  position: absolute;
+  width: calc(100% - 75px);
+  height: calc(100% - 120px);
+  overflow: hidden;
+
+  &.view {
+    height: calc(100% - 153px);
+  }
+
+  .tree-node {
+    z-index: 10;
+    position: absolute;
+    border: 1px #dddddd solid;
+    border-radius: 8px;
+    color: #999999;
+    width: 102px;
+    text-align: left;
+    line-height: 32px;
+    font-weight: 400;
+    touch-action: manipulation;
+    cursor: pointer;
+    background: #fff none;
+    white-space: nowrap;
+    padding: 0 10px;
+    font-size: 14px;
+    height: 32px;
+    user-select: none;
+
+    span {
+      width: 60px;
+      display: inline-block;
+
+      &.view {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    i {
+      float: right;
+      vertical-align: middle;
+      border-style: none;
+      line-height: inherit !important;
+    }
+
+    &.decision {
+      text-align: center;
+
+      span {
+        width: auto;
+
+        .anticon {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .text-ellipsis
+  }
+
+  .decision-tree {
+    overflow: scroll;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    .condition-label {
+      padding-right: 90px;
+    }
+  }
+}
+
+.text-orange {
+  color: @condition-color-count;
+}
+
+.node-condition {
+  z-index: 9;
+  font-size: 12px;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &.set {
+    color: @bg-color-iconfont-active;
+    margin-bottom: 15px;
+  }
+}
+
+.strategy-cascader {
+  .ant-cascader-menu {
+    height: auto !important;
+  }
+}
+
+.strategy-node-modal {
+  .ant-modal-header {
+    display: none;
+  }
+
+  .ant-modal-body {
+    padding: 10px;
+
+    .ant-form-item {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.indicator {
+  .ant-select-dropdown-menu {
+    overflow: initial;
+  }
+}
+
+.no-overflow {
+  .ant-select-selection-selected-value {
+    text-overflow: initial;
+  }
+}
+
+.mr-100 {
+  margin-right: 100px;
+}
+
+/*文字超出省略*/
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,24 @@
+//用户样式
+@import "../../../public/css/variable";
+
+.content_warp {
+  //修改全局表格样式
+  .ant-table-content tbody tr:nth-child(even) {
+    //background-color: #fff;
+  }
+
+  .ant-table-tbody > tr.active:hover > td {
+    background-color: @bg-color-iconfont-active;
+  }
+}
+
+.ant-table-content tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.form-tree-container {
+  max-height: 250px;
+  border: 1px solid #ddd;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

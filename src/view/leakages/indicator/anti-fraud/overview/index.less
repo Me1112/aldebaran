@@ -1,0 +1,41 @@
+.indicator-page {
+  .indicator-board {
+    &-title {
+      &.center {
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  .view-panel {
+    .bordered-without-outer {
+      overflow-x: auto;
+
+      th {
+        text-align: center !important;
+      }
+
+      .ant-table-bordered .ant-table-body > table {
+        border: none;
+      }
+
+      .ant-table-bordered .ant-table-thead > tr > th:last-of-type, .ant-table-bordered .ant-table-tbody > tr > td:last-of-type {
+        border-right: none;
+      }
+    }
+
+    &-title {
+      .total-statistic {
+        font-size: 14px;
+        color: #333333;
+        font-weight: 400;
+
+        &:last-of-type {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}

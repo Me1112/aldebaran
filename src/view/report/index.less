@@ -1,0 +1,94 @@
+//报表公共样式
+@import "../../public/css/variable";
+
+@height: 100%;
+.report-area {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100% - 100px);
+  .ant-row, .gutter-row {
+    height: 100%;
+  }
+  .gutter-box {
+    border: 1px solid @border-color-default;
+    height: @height;
+  }
+  .left-area {
+    .gutter-box {
+      padding: 15px;
+    }
+  }
+  .right-area {
+    .gutter-box {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+  .left-area-title {
+    p {
+      margin: 0;
+    }
+    &:after {
+      clear: both;
+      display: block;
+      content: '';
+    }
+  }
+  .left-area-warp {
+    height: calc(@height - 15px);
+    overflow-y: scroll;
+    padding-top: 10px;
+  }
+  .progress-container {
+    & {
+      margin-top: 10px;
+    }
+    .progress-title {
+      width: 200px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .ant-progress {
+      width: calc(100% - 200px);
+      padding-left: 20px;
+      .ant-progress-outer {
+        width: calc(100% - 25px);
+        &:hover {
+          background: @tr-color-hover;
+        }
+      }
+      .ant-progress-text {
+        margin-left: 20px;
+      }
+    }
+  }
+  .total-data {
+    .total-data-title {
+      line-height: 60px;
+      text-align: center;
+      font-size: 16px;
+      border-bottom: 1px solid @border-color-default;
+    }
+    .total-data-item {
+      line-height: 60px;
+      & + .total-data-item {
+        border-top: 1px solid @border-color-default;
+      }
+      overflow: hidden;
+      p {
+        float: left;
+        width: 50%;
+        margin: 0;
+      }
+    }
+
+  }
+}
+
+.cci-layout .cci-layout-right .cci-layout-content .report-area .ant-tabs .ant-tabs-content {
+  height: calc(100% - 42px);
+  padding: 10px;
+  .ant-tabs-tabpane {
+    overflow-y: auto;
+  }
+}

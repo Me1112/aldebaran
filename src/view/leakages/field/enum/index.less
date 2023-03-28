@@ -1,0 +1,38 @@
+@import "~@public/css/variable";
+
+.basic-field-enums {
+  margin-left: 120px;
+  margin-bottom: 10px;
+
+  .enum-title {
+    span {
+      margin: 0 40px;
+    }
+  }
+
+  .enum-container {
+    .enum-row {
+      .ant-input {
+        width: 100px;
+        margin: 10px;
+      }
+
+      .ant-select {
+        width: 240px;
+        margin: 10px;
+      }
+
+      i.anticon-plus-circle, i.anticon-minus-circle {
+        cursor: pointer;
+        font-size: 14px;
+        margin-left: 10px
+      }
+
+      .ant-input, .ant-select {
+        &.has-error {
+          border-color: @font-color-fail;
+        }
+      }
+    }
+  }
+}

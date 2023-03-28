@@ -1,0 +1,55 @@
+@import "../../../../public/css/variable";
+
+.scorecard-new {
+  .form-row-item {
+    padding: 0px 30px;
+    margin-bottom: 20px;
+    background-color: @font-color-white;
+
+    .form-item-container {
+      padding: 5px;
+
+      .active-warn {
+        color: @font-color-fail;
+        margin-left: 10px;
+        font-size: 12px;
+      }
+
+      .form-btn-container {
+        float: right;
+        margin-top: -10px;
+
+        .ant-btn {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .service-container {
+      height: 40px;
+      text-align: center;
+      color: @font-color-default;
+    }
+  }
+
+  .ant-tabs-tabpane {
+    overflow: auto;
+  }
+
+  .rc-range {
+    margin-left: 10px;
+    width: calc(100% - 10px);
+  }
+
+  .rc-slider-handle, .rc-slider-dot-active {
+    border-color: @primary-color;
+  }
+
+  .rc-slider-handle:focus {
+    box-shadow: none;
+  }
+
+  .rc-slider-track {
+    background-color: @primary-color;
+  }
+}

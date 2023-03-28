@@ -1,0 +1,55 @@
+@import "~@public/css/variable";
+
+.cci-layout .cci-layout-right .leakage-monitor-layout {
+  .ant-breadcrumb {
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+
+  .cci-layout-content {
+    height: calc(100% - 92px);
+    overflow-y: auto;
+
+    .basic-info {
+      margin-bottom: 10px;
+      font-size: 14px;
+
+      > div {
+        min-height: 32px;
+        color: @font-color-fail;
+      }
+
+      .label {
+        width: 70px;
+        vertical-align: top;
+        display: inline-block;
+        color: rgba(0, 0, 0, .65);
+
+        &:after {
+          content: ":";
+          margin: 0 8px 0 2px;
+          position: relative;
+          top: -0.5px;
+        }
+
+        + div {
+          width: calc(100% - 70px);
+          display: inline-block;
+          word-break: break-word;
+          white-space: pre-wrap;
+        }
+      }
+    }
+
+    .template-list {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.leakage-monitor-layout {
+  & + .view-back {
+    width: calc(100% - 200px);
+  }
+}

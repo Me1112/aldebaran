@@ -1,0 +1,55 @@
+.strategy-effect {
+  height: 100%;
+  padding: 20px;
+
+  .strategy-info, .strategy-type {
+    height: calc(50% + 17px);
+
+    .ant-card-head {
+      height: 54px;
+      line-height: 54px;
+      padding: 0 20px;
+
+      .ant-card-head-title {
+        padding: 0;
+      }
+    }
+
+    .ant-card-body {
+      height: calc(100% - 54px);
+
+      .chart {
+        display: inline-block;
+        width: calc(100% - 350px);
+      }
+
+      .grid {
+        display: inline-block;
+        width: 350px;
+        vertical-align: top;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .ant-table-small > .ant-table-content .ant-table-row:last-child td {
+          border-bottom: none !important;
+        }
+      }
+    }
+
+    #strategy-state, #strategy-distribution {
+      display: inline-block;
+      width: calc(50% - 10px);
+      height: 100%;
+      background-color: #fff;
+    }
+
+    #strategy-state {
+      margin-right: 20px;
+    }
+  }
+
+  .strategy-info {
+    height: calc(50% - 37px);
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "presets": [
+    "env",
+    [
+      "es2015",
+      {
+        "modules": false
+      }
+    ],
+    "react",
+    "stage-0"
+  ],
+  "env": {
+    "development": {
+      "presets": [
+        "react-hmre"
+      ]
+    }
+  },
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "es",
+        "style": true
+      }
+    ],
+    // `style: true` 会加载 less 文件
+    [
+      "syntax-dynamic-import"
+    ],
+    [
+      "transform-decorators-legacy"
+    ]
+  ]
+}

@@ -1,0 +1,102 @@
+.case-detail {
+
+  &.actions {
+    .cci-layout-content {
+      height: calc(100% - 111px) !important;
+    }
+  }
+
+  &.view {
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .cci-layout-content {
+    background: none !important;
+    height: calc(100% - 53px) !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: auto !important;
+
+    .ant-collapse {
+      margin: 20px;
+      background: none;
+
+      .ant-collapse-item {
+        background: #ffffff;
+        border-radius: 4px;
+        margin-bottom: 24px;
+        border: 0;
+        overflow: hidden;
+
+        .ant-collapse-content {
+          padding-left: 24px;
+
+          .conclusion {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      .top-label {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+
+    .amount {
+      color: @primary-color;
+    }
+
+    .case-actions {
+      position: fixed;
+      width: 100%;
+      height: 58px;
+      line-height: 58px;
+      text-align: right;
+      right: 0;
+      bottom: 0;
+      background-color: #ffffff;
+      z-index: 2;
+    }
+  }
+}
+
+.case-amount {
+  color: @primary-color;
+}
+
+.case-total {
+  color: #d0021b;
+}
+
+.case-event-modal {
+  .ant-modal-body {
+    padding-top: 0;
+
+    .events-tip {
+      height: 48px;
+      line-height: 48px;
+    }
+  }
+}
+
+.assign-auditor {
+  .ant-popover-content {
+    min-width: 288px !important;
+
+    .ant-popover-message-title {
+      padding-left: 0 !important;
+    }
+
+    button:first-of-type {
+      display: none;
+    }
+  }
+
+  .ant-select-dropdown-menu {
+    overflow: hidden;
+  }
+}

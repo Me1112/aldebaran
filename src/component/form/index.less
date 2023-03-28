@@ -1,0 +1,71 @@
+.cci-form-item{
+  width: 100%;
+  margin-bottom: 24px;
+  &.cci-column-layout{
+    .cci-form-item-label{
+      display: block;
+      text-align: left;
+      height: 30px;
+    }
+    .cci-form-item-children{
+      display: block;
+    }
+  }
+  &.cci-form-item-with-help {
+    margin-bottom: 6px;
+  }
+  .cci-form-item-label{
+    padding-right:5px;
+    width: 100px;
+    padding-top: 6px;
+  }
+  .cci-form-item-label,.cci-form-item-children{
+    //width: auto;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .cci-form-item-error {
+    .ant-input, & .ant-input-number, & .ant-select-selection{
+      border-color: #f5222d;
+    }
+  }
+  .cci-form-item-error .cci-form-item-error-message{
+    color: #f5222d;
+    display: block;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  .cci-form-item-error-message{
+    display: none;
+    color: #000;
+    line-height: 1.524;
+    transition: all .3s cubic-bezier(.215,.61,.355,1);
+    //margin-top: -2px;
+    clear: both;
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  .show-help-enter {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+  }
+  .show-help-enter.show-help-enter-active {
+    animation-name: antShowHelpIn;
+    animation-play-state: running;
+  }
+  @keyframes antShowHelpIn {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+}

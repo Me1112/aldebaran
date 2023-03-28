@@ -1,0 +1,146 @@
+@import "../../public/css/variable";
+
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+.bunddata-login {
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  height: 100%;
+  text-align: center;
+  min-height: 100vh;
+  min-width: 1200px;
+  position: relative;
+  background: 50% url(../../public/img/bg-login.jpg) no-repeat;
+  background-size: cover;
+  .login_title {
+    height: 40px;
+    // background: url('../images/new-logo.png') no-repeat left center;
+    position: absolute;
+    left: 85%;
+    top: 3%;
+  }
+  .login-container {
+    width: 420px;
+    float: right;
+    right: 5%;
+    min-height: 100vh;
+    //height: 350px;
+    //float: right;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 35vh;
+
+    .login-title {
+      font-size: 20px;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .login-content {
+      height: 350px;
+      margin-top: 20px;
+      padding: 40px 0 40px 0;
+      background: @font-color-white;
+      border-radius: 5px;
+    }
+
+    .row-checkbox {
+      text-align: left;
+
+      .checkbox {
+        color: @font-color-white;
+        margin-bottom: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+      }
+
+      .ant-checkbox-wrapper {
+        font-size: 14px;
+      }
+    }
+
+    .row-error {
+      color: #f00;
+      width: 100%;
+      height: 40px;
+      text-align: left;
+      padding-left: 63px;
+      margin-bottom: 10px;
+      line-height: 40px;
+      font-size: 14px;
+    }
+  }
+
+  .login-form {
+    margin-top: 20px;
+    color: #a4aab2;
+    font-size: 14px;
+    .ant-input-affix-wrapper .ant-input-prefix {
+      left: 2% !important;
+      font-size: 16px;
+    }
+    .ant-input-affix-wrapper .ant-input-prefix {
+      top: 35% !important;
+    }
+    .login-item {
+      padding: 0 10px;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+      color: #bfbfbf;
+      // padding: 0 10px;
+      box-sizing: border-box;
+      background: none;
+      box-shadow: none;
+      border: 1px solid #a0a9b4;
+
+      &::-webkit-input-placeholder {
+        font-weight: 100;
+        color: #ffffff;
+      }
+
+      &::-moz-placeholder {
+        font-weight: 100;
+        color: #ffffff;
+      }
+
+      ::-moz-placeholder {
+        font-weight: 100;
+        color: #ffffff;
+      }
+
+      :-ms-input-placeholder {
+        font-weight: 100;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .login-form-button {
+    width: 100%;
+    height: 50px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    color: @font-color-white;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}

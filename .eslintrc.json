@@ -1,0 +1,33 @@
+{
+  "extends": ["standard", "standard-react"],
+  "plugins": ["react"],
+  "parser": "babel-eslint",
+  "rules": {
+    "space-before-function-paren": [0],
+    "semi": 0,
+    "space-unary-ops": [
+      0,
+      {
+        "words": true,
+        "nonwords": false
+      }
+    ],
+    "jsx-quotes": "off",
+    "quotes":"off",
+    "react/jsx-indent": [0],
+    "react/jsx-indent-props": [0],
+    "indent": [0],
+    "no-extend-native": [0],
+    "react/jsx-no-bind": [
+      1,
+      {
+        "allowArrowFunctions": true
+      }
+    ],
+    "standard/no-callback-literal": [0]
+    //    "react/prop-types": [0],
+    //    "camelcase": [0],
+    //    "object-property-newline": [0],
+    //    "comma-dangle": [0]
+  }
+}

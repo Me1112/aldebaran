@@ -1,0 +1,41 @@
+.test-half {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  width: 50%;
+  height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .title {
+    font-weight: bolder;
+    margin-bottom: 10px;
+  }
+
+  .item {
+    height: 39px;
+    line-height: 39px;
+    margin-bottom: 10px;
+
+    .value {
+      color: @primary-color;
+    }
+  }
+
+  .code-container {
+    height: calc(100% - 31px);
+    border: 1px solid rgba(0, 0, 0, .25);
+    border-radius: 5px;
+    padding: 1px;
+  }
+
+  &:nth-of-type(2) {
+    border-left: 1px solid #d1d1d1;
+  }
+}
+
+.service-test-form {
+  .ant-form-item {
+    margin-bottom: 10px;
+  }
+}

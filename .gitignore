@@ -1,0 +1,11 @@
+node_modules/
+dist/
+dll/
+coverage/
+stats.json
+npm-debug.log*
+.DS_Store
+.idea/
+yarn-error.log
+version.txt
+dist.zip

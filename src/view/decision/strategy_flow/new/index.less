@@ -1,0 +1,119 @@
+@import "../../../../public/css/variable";
+
+.tabs-no-border.ant-tabs-top {
+  .ant-tabs-bar {
+    border-bottom: 1px solid #e8e8e8 !important;
+
+    .ant-tabs-tab {
+      border: none;
+    }
+
+    .ant-tabs-tab-active {
+      background-color: #fff !important;
+      color: @bg-color-iconfont-active !important;
+      padding-bottom: inherit;
+      border-bottom: 2px solid;
+    }
+  }
+}
+
+.text-orange {
+  color: @condition-color-count;
+}
+
+.node-condition {
+  z-index: 9;
+  font-size: 12px;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &.set {
+    color: @bg-color-iconfont-active;
+    margin-bottom: 15px;
+  }
+}
+
+.strategy-cascader {
+  .ant-cascader-menu {
+    height: auto !important;
+  }
+}
+
+.strategy-node-modal {
+  .ant-modal-header {
+    display: none;
+  }
+
+  .ant-modal-body {
+    padding: 10px;
+
+    .ant-form-item {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.indicator {
+  .ant-select-dropdown-menu {
+    overflow: initial;
+  }
+}
+
+.no-overflow {
+  .ant-select-selection-selected-value {
+    text-overflow: initial;
+  }
+}
+
+.mr-100 {
+  margin-right: 100px;
+}
+
+/*文字超出省略*/
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flow-config {
+  padding: 0 4px 4px 4px;
+
+  .header {
+    height: 64px;
+    line-height: 64px;
+
+    .item {
+      display: inline-block;
+      width: 120px;
+
+      .anticon {
+        font-size: 45px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .content {
+    height: calc(100% - 64px);
+
+    .panel {
+      width: calc(100% - 320px);
+      height: 100%;
+      display: inline-block;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+    }
+
+    .detail {
+      width: 320px;
+      height: 100%;
+      display: inline-block;
+    }
+  }
+}

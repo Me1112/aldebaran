@@ -1,0 +1,169 @@
+.indicator-page {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &.m20 {
+    margin: 20px;
+  }
+
+  &.overflow {
+    height: calc(100% - 40px);
+
+    &.hidden {
+      overflow: hidden;
+    }
+  }
+
+  > .ant-tabs-content {
+    padding: 0 !important;
+    background-color: transparent !important;
+    overflow-x: hidden !important;
+  }
+
+  .indicator-board, .view-panel {
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
+    background-color: #ffffff;
+    padding: 20px;
+    color: #333333;
+
+    &-title {
+      height: 20px;
+      line-height: 20px;
+      border-left: 2px solid @primary-color;
+      padding-left: 10px;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 20px;
+
+      .ant-select, .ant-select-selection-selected-value {
+        font-weight: 400;
+      }
+
+      > span.fr {
+        font-size: 14px;
+        margin-top: .125em;
+      }
+
+      > span.ant-calendar-picker {
+        width: 222px;
+      }
+
+      &.no-border {
+        border-left: none;
+        padding-left: 0;
+
+        > span {
+          &:first-of-type {
+            margin-right: 0;
+          }
+        }
+      }
+
+      &.mb0 {
+        margin-bottom: 0;
+      }
+
+      .month-range-picker-separator {
+        font-size: 12px;
+      }
+
+      button {
+        width: 80px;
+        margin-left: 30px;
+      }
+
+      > span {
+        &:first-of-type {
+          margin-right: 30px;
+        }
+
+        &.quick-time {
+          margin-right: 20px;
+          cursor: pointer;
+          font-size: 14px;
+
+          &.active {
+            color: @primary-color;
+          }
+        }
+      }
+    }
+
+    .overview-chart {
+      height: 400px;
+      margin-top: 20px;
+      border: 2px solid #f0f0f0;
+    }
+
+    .part-chart, .part-pie {
+      height: 460px;
+      border: 2px solid #f0f0f0;
+    }
+
+    .mt20 {
+      margin-top: 20px;
+    }
+  }
+
+  .indicator-board {
+    + .view-panel {
+      margin-top: 20px;
+    }
+
+    .ant-row {
+      height: 120px;
+      background-color: @primary-color-alpha-10;
+
+      > div {
+        height: 100%;
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-left: 30px;
+        font-size: 14px;
+        font-weight: 500;
+
+        > .title {
+          overflow: hidden;
+          word-break: keep-all;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        > .sum {
+          margin-top: 23px;
+          text-align: right;
+          color: @primary-color;
+          overflow: hidden;
+          word-break: keep-all;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-size: 18px;
+
+          > span {
+            display: inline-block;
+            overflow: hidden;
+            width: calc(100% - 18px);
+            line-height: 36px;
+            font-size: 36px;
+            vertical-align: bottom;
+            text-overflow: ellipsis;
+
+            &.w36 {
+              width: calc(100% - 36px);
+            }
+          }
+        }
+
+        &:nth-of-type(2n+2) {
+          background-color: @primary-color-alpha-05;
+        }
+      }
+    }
+  }
+}
